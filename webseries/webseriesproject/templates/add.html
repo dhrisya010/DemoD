@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD DETAILS</title>
+</head>
+<body style="text-align:center;">
+{% extends 'base.html' %}
+{% block body %}
+<h2 style="color:red; text-align:center;">ADD WEBSERIES</h2>
+
+<form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="text" name="name" placeholder="Enter the series name"><br><br>
+      <input type="text" name="desc" placeholder="Enter the description"><br><br>
+      <input type="text" name="year" placeholder="Enter the release year"><br><br>
+      <input type="text" name="Language" placeholder="Enter the series language"><br><br>
+      <input type="file" name="image"><br><br>
+      <input type="submit">
+
+
+{% endblock %}
+</form>
+</body>
+</html>

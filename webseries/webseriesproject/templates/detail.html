@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+           <img src="{{series1.image.url}}" width="300" height="300">
+        </div>
+
+<body style="background-color:lightcoral">
+<div class="col-md-3">
+    <h4 style="color:green;">Series Name-{{series1.name}}</h4>
+    <h4 style="color:crimson;">Description-{{series1.desc}}</h4>
+    <h4 style="color:green;">Release Year-{{series1.year}}</h4>
+    <h4 style="color:crimson;">Language-{{series1.Language}}</h4>
+    <a class="btn btn-warning" href="{% url 'seriesapp:update_series' series1.id %}">UPDATE</a>
+    <a class="btn btn-danger" href="{% url 'seriesapp:delete' series1.id %}">DELETE</a>
+
+</div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>
